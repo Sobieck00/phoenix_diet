@@ -33,7 +33,7 @@ defmodule PhoenixDiet.Endpoint do
   plug Plug.Session,
     store: :cookie,
     key: "_phoenix_diet_key",
-    signing_salt: "HMqYLbd8"
+    signing_salt: "ym+TM2tE"
 
   plug PhoenixDiet.Router
 end

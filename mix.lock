@@ -10,6 +10,5 @@
   "plug": {:hex, :plug, "1.0.2"},
   "poison": {:hex, :poison, "1.5.0"},
   "poolboy": {:hex, :poolboy, "1.5.1"},
-  "ranch": {:hex, :ranch, "1.1.0"},
-  "tds": {:hex, :tds, "0.5.2"},
-  "tds_ecto": {:hex, :tds_ecto, "1.0.0"}}
+  "postgrex": {:hex, :postgrex, "0.9.1"},
+  "ranch": {:hex, :ranch, "1.1.0"}}

@@ -9,7 +9,7 @@ use Mix.Config
 config :phoenix_diet, PhoenixDiet.Endpoint,
   url: [host: "localhost"],
   root: Path.dirname(__DIR__),
-  secret_key_base: "ayjFgEEjmBc6FaopLXNn9jQkombBX0vMoIpFlJ7YAyhJjQsjTcSEWn+skiA/1guU",
+  secret_key_base: "Nl+Y1ascYoVVBs7s3RfonMpHMSynagTWr9yN1aBSlMBe0VywcUpRFq7lsIadMilp",
   render_errors: [accepts: ~w(html json)],
   pubsub: [name: PhoenixDiet.PubSub,
            adapter: Phoenix.PubSub.PG2]

@@ -11,10 +11,9 @@ config :logger, level: :warn
 
 # Configure your database
 config :phoenix_diet, PhoenixDiet.Repo,
-  adapter: Tds.Ecto,
-  username: "njhknhasfdhjnkasdf23009@phoenixdiet",
-  password: "sadfnsadfun2389fhj9nasfujn320*((*HYasdnn1d)901nkAS()D090*/-+*/-+*/asd51654",
-  database: "phoenix_diet_dev",
-  hostname: "phoenixdiet.database.windows.net",
-  encrypt: true,
-  trustServerCertificate: false
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "phoenix_diet_test",
+  hostname: "localhost",
+  pool: Ecto.Adapters.SQL.Sandbox
