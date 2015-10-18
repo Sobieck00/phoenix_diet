@@ -11,5 +11,4 @@ defmodule PhoenixDiet.WriteController do
       lisa: lisa
     }
   end
-
 end

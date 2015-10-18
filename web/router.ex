@@ -13,17 +13,6 @@ defmodule PhoenixDiet.Router do
     plug :accepts, ["json"]
   end
 
-  #scope "/", PhoenixDiet do
-  #  pipe_through :browser # Use the default browser stack
-
-  #  get "/", PageController, :index
-
-  #
-
-  #  get "/read/:is/:lisa", WriteController, :lisa
-  #end
-
-
   # Other scopes may use custom stacks.
   scope "/api", PhoenixDiet do
    pipe_through :api

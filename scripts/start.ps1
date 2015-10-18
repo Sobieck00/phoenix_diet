@@ -2,21 +2,21 @@ cd ../
 
 Function RunOrCreate()
 {
-  $input = read-host "Start, Create (DB), Update (Dependencies), Test, or Exit"
+  $input = read-host "Start (S), Create DB (C), Update Dependencies (U), Test (T), or Exit (E)"
 
-  IF ($INPUT -eq 'start'){
+  IF ($INPUT -eq 's'){
     mix phoenix.server
   }
 
-  IF ($INPUT -eq 'create'){
+  IF ($INPUT -eq 'c'){
     mix ecto.create
   }
 
-  IF($INPUT -eq 'Update'){
+  IF($INPUT -eq 'u'){
     mix deps.get
   }
 
-  IF($INPUT -eq 'test'){
+  IF($INPUT -eq 't'){
     mix test
   }
 

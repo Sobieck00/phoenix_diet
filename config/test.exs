@@ -13,7 +13,7 @@ config :logger, level: :warn
 config :phoenix_diet, PhoenixDiet.Repo,
   adapter: Ecto.Adapters.Postgres,
   username: "postgres",
-  password: "postgres",
+  password: "sadfnsadfun2389fhj9nasfujn320*((*HYasdnn1d)901nkAS()D090*/-+*/-+*/asd51654",
   database: "phoenix_diet_test",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox
