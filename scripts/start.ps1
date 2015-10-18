@@ -2,7 +2,7 @@ cd ../
 
 Function RunOrCreate()
 {
-  $input = read-host "Start, Create (For DB), Dep or Exit"
+  $input = read-host "Start, Create (DB), Update (Dependencies), Test, or Exit"
 
   IF ($INPUT -eq 'start'){
     mix phoenix.server
@@ -12,8 +12,12 @@ Function RunOrCreate()
     mix ecto.create
   }
 
-  IF($INPUT -eq 'dep'){
+  IF($INPUT -eq 'Update'){
     mix deps.get
+  }
+
+  IF($INPUT -eq 'test'){
+    mix test
   }
 
   if ($INPUT -ne 'EXIT'){

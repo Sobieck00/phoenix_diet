@@ -1,26 +1,35 @@
 defmodule PhoenixDiet.Router do
   use PhoenixDiet.Web, :router
 
-  pipeline :browser do
-    plug :accepts, ["html"]
-    plug :fetch_session
-    plug :fetch_flash
-    plug :protect_from_forgery
-    plug :put_secure_browser_headers
-  end
+  #pipeline :browser do
+  #  plug :accepts, ["html"]
+  #  plug :fetch_session
+  #  plug :fetch_flash
+  #  plug :protect_from_forgery
+  #  plug :put_secure_browser_headers
+  #end
 
   pipeline :api do
     plug :accepts, ["json"]
   end
 
-  scope "/", PhoenixDiet do
-    pipe_through :browser # Use the default browser stack
+  #scope "/", PhoenixDiet do
+  #  pipe_through :browser # Use the default browser stack
 
-    get "/", PageController, :index
-  end
+  #  get "/", PageController, :index
+
+  #
+
+  #  get "/read/:is/:lisa", WriteController, :lisa
+  #end
+
 
   # Other scopes may use custom stacks.
-  # scope "/api", PhoenixDiet do
-  #   pipe_through :api
-  # end
+  scope "/api", PhoenixDiet do
+   pipe_through :api
+
+   get "/read/:is/:lisa", WriteController, :lisa
+
+   get "/write/:id", WriteController, :index
+  end
 end
