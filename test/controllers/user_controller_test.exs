@@ -2,7 +2,7 @@ defmodule PhoenixDiet.UserControllerTest do
   use PhoenixDiet.ConnCase
 
   alias PhoenixDiet.User
-  @valid_attrs %{password_hash: "some content", user_name: "some content"}
+  @valid_attrs %{password_hash: "some content", user_name: "some content3"}
   @invalid_attrs %{}
 
   setup do
@@ -59,4 +59,14 @@ defmodule PhoenixDiet.UserControllerTest do
     assert response(conn, 204)
     refute Repo.get(User, user.id)
   end
+
+  test "changeset is invalid if username is used already" do
+    %User{} |> User.changeset(@valid_attrs) |> Repo.insert!
+
+    user2 = %User{} |> User.changeset(@valid_attrs)
+
+    assert {:error, changeset} = Repo.insert(user2)
+    assert changeset.errors[:user_name] == "has already been taken"
+  end
+
 end
