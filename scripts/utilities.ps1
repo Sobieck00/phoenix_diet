@@ -24,7 +24,7 @@ Function RunOrCreate()
     mix ecto.migrate
   }
 
-  if ($INPUT -ne 'EXIT'){
+  if ($INPUT -ne 'e'){
     RunOrCreate
   }
 

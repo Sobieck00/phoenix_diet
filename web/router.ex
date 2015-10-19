@@ -20,5 +20,7 @@ defmodule PhoenixDiet.Router do
    get "/read/:is/:lisa", WriteController, :lisa
 
    get "/write/:id", WriteController, :index
+
+   resources "/users", UserController
   end
 end
