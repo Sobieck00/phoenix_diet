@@ -25,6 +25,8 @@ Function Add-Columns($command)
   }
   else
   {
+    cd ../
+
     Invoke-Expression $newString
   }
 }
