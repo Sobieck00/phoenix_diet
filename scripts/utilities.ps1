@@ -1,3 +1,8 @@
+
+Invoke-BatchFile  "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
+
+#$env:Path += ";c:\program files (x86)\Microsoft Visual Studio 14.0\VC\bin"
+
 cd ../
 
 Function RunOrCreate()
