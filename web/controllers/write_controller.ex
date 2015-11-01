@@ -1,9 +1,14 @@
 defmodule PhoenixDiet.WriteController do
   use PhoenixDiet.Web, :controller
 
-  def index(conn, %{"id" => id}) do
-    hash = Comeonin.create_hash(id)
-    json conn, %{id: hash}
+  alias Comeonin.Bcrypt
+
+  def index(conn, %{"name" => name, "password" => password}) do
+    {:ok, params} = Comeonin.create_hash(password)
+
+    result = Bcrypt.checkpw(password, params)
+
+    json conn, %{result: result, hash: params}
   end
 
   def lisa(conn, %{"is" => is, "lisa" => lisa}) do
