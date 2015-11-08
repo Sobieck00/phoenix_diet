@@ -40,3 +40,11 @@ config :phoenix_diet, PhoenixDiet.Repo,
   database: "phoenix_diet_dev",
   hostname: "localhost",
   pool_size: 10
+
+config :exredis,
+  host: "localhost",
+  port: 6379,
+  password: "",
+  db: 0,
+  reconnect: :no_reconnect,
+  max_queue: :infinity

@@ -1,7 +1,7 @@
 
 Invoke-BatchFile  "C:\Program Files (x86)\Microsoft Visual Studio 14.0\VC\vcvarsall.bat" amd64
 
-#$env:Path += ";c:\program files (x86)\Microsoft Visual Studio 14.0\VC\bin"
+$env:Path += ";C:\Program Files\PostgreSQL\9.5\bin"
 
 cd ../
 

@@ -1,5 +1,6 @@
 defmodule PhoenixDiet.WriteController do
   use PhoenixDiet.Web, :controller
+  import Exredis
 
   alias Comeonin.Bcrypt
 
@@ -7,6 +8,10 @@ defmodule PhoenixDiet.WriteController do
     {:ok, params} = Comeonin.create_hash(password)
 
     result = Bcrypt.checkpw(password, params)
+
+    {:ok, client} = Exredis.start_link
+
+    client |> Exredis.query ["SET", name, params]
 
     json conn, %{result: result, hash: params}
   end
