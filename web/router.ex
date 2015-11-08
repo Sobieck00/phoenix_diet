@@ -17,10 +17,7 @@ defmodule PhoenixDiet.Router do
   scope "/api", PhoenixDiet do
    pipe_through :api
 
-   get "/read/:is/:lisa", WriteController, :lisa
-
-   get "/write/:name/:password", WriteController, :index
-
+   resources "/redis", RedisController
    resources "/users", UserController
   end
 end
